@@ -29,21 +29,6 @@ pipeline {
                 echo 'Successfully Pushed and deploy successfully'
             }
         }
-        stage('Upload Artifact to artifactory'){
-            environment{
-                CI = true
-                
-                PASS = credentials('pass')
-            }
-            steps{
-                sh 'curl -u jenkins:${PASS} -T /var/lib/jenkins/workspace/pipe2/app.py "http://192.168.59.1:8082/artifactory/jenkins/"'
-            }
-            post{
-                success{
-                    echo 'Succefully uploaded to jfrog artifact'
-                }
-            }
-        }	    
-	    
+         
     }
     }
