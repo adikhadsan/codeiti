@@ -14,8 +14,8 @@ pipeline {
 		}
         stage('Build&Push Image') {
             steps {
-                sh 'docker build -t 8485012281/jenkins .'
-		sh 'docker push 8485012281/jenkins'
+                sh 'docker build -t 8485012281/jenkins-c2 .'
+		sh 'docker push 8485012281/jenkins-c2'
             }
         }
 //         stage('Run Image') {
