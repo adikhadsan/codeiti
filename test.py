@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello():
-    return '<h1>Hello from generic feature updated...</h1>'
+    return '<h1>Hello from generic feature update from local git...</h1>'
 
 
 @app.route('/about/')
